@@ -33,3 +33,7 @@ h2 {
   border: 1px solid white;
   display: flex;
 }
+.d-flex {
+  
+  padding-left: 30%;
+}
