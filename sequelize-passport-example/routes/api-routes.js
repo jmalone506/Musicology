@@ -2,6 +2,7 @@
 var db = require("../models");
 var passport = require("../config/passport");
 const user = require("../models/user");
+// const CodyMusic = require("cody-music");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -81,6 +82,35 @@ app.delete("/api/delete_playlist", (req, res)=>{
     console.log(err);
     res.status(401).json(err);
   });
+//   await CodyMusic.getRunningTrack().then
+//   ((track) => {
+//     // returns the Track data
+// });
+
+// // play a specific spotify track
+// await CodyMusic.playTrack(
+//     "spotify",
+//     "spotify:track:2YarjDYjBJuH63dUIh9OWv"
+// ).then((result) => {
+//     // track is playing
+// });
+
+// // play an iTunes track number
+// await CodyMusic.playTrack("itunes", 1).then((result) => {
+//     // track is playing
+// });
+
+// // handling errors
+// await CodyMusic.playTrack("spotify", 1000000000).then((result) => {
+//     // result will contain the "error" attribute with the error message
+//     if (result.error) {
+//         console.log(`Unable to play track, error: ${result.error}`);
+//     }
+// });
+// await CodyMusic.getRunningTrack().then((result) => {
+//     // result will be the best effort track that is playing.
+//     // i.e. if you have your itunes app running, it would show you that track
+// });
 });
 
 
