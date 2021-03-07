@@ -1,6 +1,6 @@
 
 var Sequelize = require("sequelize");
-var sequelize = require("../config/connection.js");
+var sequelize = require("../config/passport");
 
 var Playlist = sequelize.define("playlist", {
   routeName: Sequelize.STRING,
