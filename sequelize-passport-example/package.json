@@ -11,9 +11,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@magic-modules/sound-cloud": "0.0.5",
+    "apple-music-playlist": "^1.0.1",
     "bcryptjs": "2.4.3",
+    "cody-music": "^2.9.36",
     "express": "^4.17.0",
-    "express-session": "^1.16.1",
+    "express-session": "^1.17.1",
     "music-player-akumis": "^1.0.11",
     "mysql2": "^1.6.5",
     "passport": "^0.4.0",

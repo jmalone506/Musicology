@@ -28,19 +28,19 @@ module.exports = function(app) {
   app.get("/members", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
-app.get("/", (req,res) =>{
+app.get("/signup", (req,res) =>{
   if(req.user){
-    res.sendFile(path.join(__dirname,"..public/"));
+    res.sendFile(path.join(__dirname,"..public/signup"));
   }else{
-    res.sendFile(path.join(__dirname,"../public/"))
+    res.sendFile(path.join(__dirname,"../public/login"))
   }
 })
-app.get("/",(req,res) =>{
-  if(req.user){
-    res.sendFile(path.join(__dirname, "../public/"));
-  }else{
-    res.sendFile(path.join(__dirname, "../public/"));
+// app.get("/",(req,res) =>{
+//   if(req.user){
+//     res.sendFile(path.join(__dirname, "../public/"));
+//   }else{
+//     res.sendFile(path.join(__dirname, "../public/"));
     
-  }
-})
+//   }
+// })
 };
