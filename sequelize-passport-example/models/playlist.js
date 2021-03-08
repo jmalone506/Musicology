@@ -1,15 +1,15 @@
-var Sequelize = require("sequelize");
-var sequelize = require("../config/passport");
+// var DataTypes = require("sequelize");
+// var sequelize = require("../config/passport");
 
-
+module.exports = function(sequelize, DataTypes) {
 var Playlist = sequelize.define("playlist", {
-  routeName: Sequelize.STRING,
-  genre: Sequelize.STRING,
-  song: Sequelize.STRING,
-  artist: Sequelize.STRING,
-  playlist: Sequelize.STRING,
-  album: Sequelize.STRING,
-  search: Sequelize.ARRAY
+  routeName: DataTypes.STRING,
+  genre: DataTypes.STRING,
+  song: DataTypes.STRING,
+  artist: DataTypes.STRING,
+  playlist: DataTypes.STRING,
+  album: DataTypes.STRING,
+
   
   
 }, {
@@ -18,6 +18,6 @@ var Playlist = sequelize.define("playlist", {
 });
 
 
-Playlist.sync();
+return Playlist;
 
-module.exports = Playlist
+}
