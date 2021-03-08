@@ -7,7 +7,7 @@
 * License
 * Link
 ## Description of Project
-Ever sing the wrong words to your favorite song
+Ever sing the wrong words to your favorite song. Musicology stops the debut 
 ## Screenshots
 ![Desktop-screenshot (4)](https://user-images.githubusercontent.com/71943779/110380852-876e1200-800d-11eb-839f-48adeeb7492b.png)
 ![Desktop-screenshot (1)](https://user-images.githubusercontent.com/71943779/110381016-c8662680-800d-11eb-8035-37d9645d8471.png)
