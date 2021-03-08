@@ -5,6 +5,11 @@ form.login {
 }
 body {
   background-color: #393d3f;
+  color: antiquewhite;
+}
+h1{
+  color: antiquewhite;
+  font-size: xx-large;
 }
 .musicapp {
   color: #d66853;
@@ -18,6 +23,7 @@ body {
 h2,
 .container {
   color: white;
+  text-align: center;
 }
 h2 {
   background-color: #d66853;
@@ -32,4 +38,21 @@ h2 {
 .header {
   border: 1px solid white;
   display: flex;
+}
+.d-flex {
+  
+  padding-left: 30%;
+}
+p{
+  text-align: center;
+  font-size: x-large;
+  color: antiquewhite;
+}
+.search{
+  color: black;
+}
+.songResults{
+  list-style: none;
+  padding: 20px;
+  font-size: x-large;
 }

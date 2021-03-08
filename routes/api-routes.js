@@ -1,7 +1,8 @@
 // Requiring our models and passport as we've configured it
-var db = require("../models");
-var passport = require("../config/passport");
-const user = require("../models/user");
+const db = require("../models");
+const passport = require("../config/passport");
+const { QueryTypes } = require ('sequelize');
+
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -23,6 +24,7 @@ module.exports = function(app) {
         res.redirect(307, "/api/login");
       })
       .catch(function(err) {
+        console.log(err)
         res.status(401).json(err);
       });
   });
@@ -32,7 +34,7 @@ module.exports = function(app) {
     req.logout();
     res.redirect("/");
   });
-
+  
   // Route for getting some data about our user to be used client side
   app.get("/api/user_data", function(req, res) {
     if (!req.user) {
@@ -48,61 +50,40 @@ module.exports = function(app) {
     }
   });
 };
-app.post("/api/add_playlist", (req, res)=> {
-  console.log(req.body);
-  db.playlist
-  .create({
-    playlistId: req.body.playlistId,
-    playlistName: req.body.playlistName,
-    genre: req.body.genre,
-    song: req.body.song,
-    artist: req.body.artist,
-    album: req.body.album,
-    search: req.body.search,
-  })
-  .then(() =>{
-    res.send(200);
-  })
-  .catch(err => {
-    console.log(err);
-    res.status(401).json(err);
-  });
-});
-app.delete("/api/delete_playlist", (req, res)=>{
-  console.log(req.body);
-  db.playlist
-  .destroy({
-    where: {playlistId: req.body.playlistId},
-  })
-  .then(() =>{
-    res.send(200);
-  })
-  .catch(err => {
-    console.log(err);
-    res.status(401).json(err);
-  });
-});
-
-
-// $("#addPlaylist").on('click', function(){
-//   let playlist;
-//   playlist = {
-//     playlistname: $("inputPlaylist").val().trim(),
-//     // routeName: Sequelize.STRING,
-//     genre: true,
-//     song: true,
-//     artist: true,
-//     playlist: true,
-//     album: true,
-//     search: true,
-//   };
-//   if(!playlist){
-//     return;
-//   }
-//   $.post("/api/add_playlist", playlist).then(() =>{
-//     console.log(playlist)
-//     $.get("/api/user").then(data =>{
-//       user = data.id;
-//     })
+// app.post("/api/user_data", (req, res)=> {
+//   console.log(req.body);
+//   db.playlist
+//   .create({
+//     playlistId: req.body.playlistId,
+//     playlistName: req.body.playlistName,
+//     genre: req.body.genre,
+//     song: req.body.song,
+//     artist: req.body.artist,
+//     album: req.body.album,
 //   })
-// })
+//   .then(() =>{
+//     res.send(200);
+//   })
+//   .catch(err => {
+//     console.log(err);
+//     res.status(401).json(err);
+//   });
+// });
+// app.delete("/api/delete_playlist", (req, res)=>{
+//   console.log(req.body);
+//   db.playlist
+//   .destroy({
+//     where: {playlistId: req.body.playlistId},
+//   })
+//   .then(() =>{
+//     res.send(200);
+//   })
+//   .catch(err => {
+//     console.log(err);
+//     res.status(401).json(err);
+//   });
+//   await CodyMusic.getRunningTrack().then
+//   ((track) => {
+//     // returns the Track data
+// });
+
