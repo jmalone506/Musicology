@@ -13,7 +13,12 @@
 ![Desktop-screenshot](https://user-images.githubusercontent.com/71943779/110381160-f51a3e00-800d-11eb-8046-1d8f24807f1e.png)
 
 ## Installation
+node packages
+sequelize, lyric-fetcher, express, passport
 ## Usage
 ## Contribution
+Josh,
+Jammie,
+Adam
 ## License
 ## Link
