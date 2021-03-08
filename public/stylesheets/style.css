@@ -45,9 +45,14 @@ h2 {
 }
 p{
   text-align: center;
-  font-size: large;
+  font-size: x-large;
   color: antiquewhite;
 }
 .search{
   color: black;
+}
+.songResults{
+  list-style: none;
+  padding: 20px;
+  font-size: x-large;
 }

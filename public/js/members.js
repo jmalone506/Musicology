@@ -36,7 +36,7 @@ function showData(data){
     result.innerHTML = `
     <ul class="song-list">
       ${data.data
-        .map(song=> `<li>
+        .map(song=> `<li class= "songResults">
                  <div>
                <strong>${song.artist.name}</strong> -${song.title} 
                </div>
@@ -70,6 +70,6 @@ async function getLyrics(artist, songTitle) {
   
     const lyrics = data.lyrics.replace(/(\r\n|\r|\n)/g, '<br>');
   
-    result.innerHTML = `<h2><strong>${artist}</strong> - ${songTitle}</h2>
-    <p>${lyrics}</p>`
+    result.innerHTML = `<h2 class= "text-center"><strong>${artist}</strong> - ${songTitle}</h2>
+    <p class="text-center">${lyrics}</p>`
   }
