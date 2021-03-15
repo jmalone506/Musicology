@@ -7,7 +7,8 @@
 * License
 * Link
 ## Description of Project
-Ever sing the wrong words to your favorite song. Musicology stops the debut 
+Ever sing the wrong words to your favorite song. Musicology stops the debut of is Michael Jackson is saying sha'mon or c'mon in all his songs.
+Look up any artist's hit songs and used those lryics for your next karaoke night.  
 ## Screenshots
 ![Desktop-screenshot (4)](https://user-images.githubusercontent.com/71943779/110380852-876e1200-800d-11eb-839f-48adeeb7492b.png)
 ![Desktop-screenshot (1)](https://user-images.githubusercontent.com/71943779/110381016-c8662680-800d-11eb-8035-37d9645d8471.png)
@@ -27,4 +28,7 @@ Josh,
 Jammie,
 Adam
 ## License
+lyric-fetcher,
 ## Link
+ https://hidden-island-57904.herokuapp.com/
+  https://github.com/jmalone506/Musicology
